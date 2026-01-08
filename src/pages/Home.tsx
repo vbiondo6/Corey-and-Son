@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTree, FaWater, FaCheckCircle } from 'react-icons/fa';
+import heroBg from '../assets/hero-bg.jpg';
 
 const Home: React.FC = () => {
   const Icon = (props: { icon: any, className?: string }) => {
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero-section" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1558905619-17254261ecd8?auto=format&fit=crop&q=80&w=1920")'}}>
+      <section className="hero-section" style={{backgroundImage: `url(${heroBg})`}}>
         <div className="hero-overlay"></div>
         <div className="container hero-content">
           <h1 className="display-3 text-white mb-4">Crafting Your Dream <br/><span className="text-accent">Outdoor Oasis</span></h1>
