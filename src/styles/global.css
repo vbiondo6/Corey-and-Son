@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --primary-green: #1a3c34;
+  --accent-gold: #c5a059;
+  --earth-taupe: #7d6b5d;
+  --light-bg: #f8f9fa;
+  --dark-text: #212529;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.text-accent {
+  color: var(--accent-gold);
+}
+
+.bg-primary-green {
+  background-color: var(--primary-green);
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.btn-primary:hover {
+  background-color: #122b25;
+  border-color: #122b25;
+}
+
+.btn-outline-gold {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--accent-gold);
+  color: white;
+}
+
+.hero-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-green) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.service-card {
+  border: none;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 60px 0 20px;
+}
