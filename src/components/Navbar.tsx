@@ -3,10 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom border-2">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <span className="ms-2 text-wrap" style={{maxWidth: '250px'}}>Corey & Son <small className="d-block text-muted" style={{fontSize: '0.6em'}}>Landscaping & Power Washing</small></span>
+          <span className="fw-black" style={{fontSize: '1.4rem'}}>COREY & SON</span>
         </Link>
         <button 
           className="navbar-toggler" 
@@ -31,13 +31,13 @@ const Navbar: React.FC = () => {
               <NavLink className="nav-link" to="/services">Services</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
+              <NavLink className="nav-link" to="/portfolio">Work</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">Contact</NavLink>
             </li>
           </ul>
-          <Link to="/contact" className="btn btn-primary ms-lg-3 px-4">Get a Quote</Link>
+          <Link to="/contact" className="btn btn-primary ms-lg-3 px-4 fw-bold rounded-0">GET A QUOTE</Link>
         </div>
       </div>
     </nav>

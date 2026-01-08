@@ -9,43 +9,43 @@ const Services: React.FC = () => {
 
   const services = [
     {
-      title: "Landscape Design",
-      description: "Custom design solutions including 3D rendering, plant selection, and architectural planning for your outdoor spaces.",
-      icon: FaSeedling
-    },
-    {
-      title: "Lawn Maintenance",
-      description: "Weekly mowing, edging, fertilization, and weed control to keep your lawn in peak condition year-round.",
+      title: "LAWN MOWING",
+      description: "We cut it, trim it, and blow it off. Simple as that. We'll keep your grass looking sharp all season.",
       icon: FaLeaf
     },
     {
-      title: "Power Washing",
-      description: "Professional grade cleaning for sidings, roofs, driveways, decks, and patios using safe, effective pressure levels.",
+      title: "POWER WASHING",
+      description: "Driveways, sidewalks, siding, decks. If it's got dirt on it, we can wash it off.",
       icon: FaWater
     },
     {
-      title: "Hardscaping",
-      description: "Installation of retaining walls, paver patios, walkways, and outdoor kitchens built to last a lifetime.",
-      icon: FaRoad
-    },
-    {
-      title: "Property Cleanup",
-      description: "Seasonal leaf removal, gutter cleaning, and brush clearing to keep your property tidy and safe.",
+      title: "YARD CLEANUP",
+      description: "Got a mess of leaves or brush? We'll come haul it away and get your yard back in shape.",
       icon: FaHome
     },
     {
-      title: "Snow Removal",
-      description: "Commercial and residential snow plowing, salting, and sidewalk clearing during the harsh winter months.",
+      title: "MULCH & PLANTING",
+      description: "Need some fresh mulch or a few bushes planted? We can handle that too. Nothing too fancy.",
+      icon: FaSeedling
+    },
+    {
+      title: "SMALL HARDSCAPES",
+      description: "We can fix up a walkway or lay down some pavers. Solid work that lasts.",
+      icon: FaRoad
+    },
+    {
+      title: "SNOW PLOWING",
+      description: "When it snows, we plow. Driveways and sidewalks. We'll get you out.",
       icon: FaSnowflake
     }
   ];
 
   return (
     <div>
-      <section className="bg-primary-green text-white py-5">
-        <div className="container py-4 text-center">
-          <h1 className="display-4">Our Services</h1>
-          <p className="lead opacity-75">Comprehensive solutions for a beautiful, clean property.</p>
+      <section className="bg-dark text-white py-5">
+        <div className="container py-4">
+          <h1 className="display-4 fw-black text-uppercase">What We Do</h1>
+          <p className="lead">We work hard so you don't have to.</p>
         </div>
       </section>
 
@@ -54,10 +54,10 @@ const Services: React.FC = () => {
           <div className="row g-4">
             {services.map((service, index) => (
               <div className="col-lg-4 col-md-6" key={index}>
-                <div className="card h-100 border-0 shadow-sm p-4 text-center service-card">
-                  <div className="text-accent fs-1 mb-3"><Icon icon={service.icon} /></div>
-                  <h3 className="mb-3">{service.title}</h3>
-                  <p className="text-muted">{service.description}</p>
+                <div className="card h-100 service-card p-4 text-center bg-light">
+                  <div className="text-success fs-1 mb-3"><Icon icon={service.icon} /></div>
+                  <h3 className="mb-3 fw-black">{service.title}</h3>
+                  <p className="text-muted fw-bold">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -65,25 +65,15 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-light">
+      <section className="section-padding" style={{backgroundColor: '#ffc107'}}>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h2 className="display-6 mb-4">The Power Washing Advantage</h2>
-              <p>Regular power washing doesn't just make your home look better—it protects your investment. Our team uses specialized nozzles and detergents to:</p>
-              <ul className="list-unstyled">
-                <li className="mb-2"><Icon icon={FaLeaf} className="text-accent me-2" /> Remove harmful mold, mildew, and algae</li>
-                <li className="mb-2"><Icon icon={FaLeaf} className="text-accent me-2" /> Extend the life of your siding and paint</li>
-                <li className="mb-2"><Icon icon={FaLeaf} className="text-accent me-2" /> Improve overall property value and curb appeal</li>
-                <li className="mb-2"><Icon icon={FaLeaf} className="text-accent me-2" /> Create a safer, non-slip environment for walkways</li>
-              </ul>
-            </div>
-            <div className="col-lg-6 mt-4 mt-lg-0">
-              <img 
-                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=1000" 
-                alt="Power washing in action" 
-                className="img-fluid rounded shadow"
-              />
+            <div className="col-lg-8 mx-auto text-center text-dark">
+              <h2 className="display-5 fw-black mb-4 text-uppercase">Need Something Else?</h2>
+              <p className="lead fw-bold mb-4">
+                If you need something done outside and you don't see it listed, just ask. If we can do it, we will. If we can't, we'll tell you straight up.
+              </p>
+              <a href="/contact" className="btn btn-dark btn-lg rounded-0 px-5 fw-bold">GIVE US A CALL</a>
             </div>
           </div>
         </div>

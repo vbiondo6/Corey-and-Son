@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaTree, FaWater, FaCheckCircle } from 'react-icons/fa';
+import { FaCheckSquare, FaTools, FaTruck } from 'react-icons/fa';
 import heroBg from '../assets/hero-bg.jpg';
 import homeIntro from '../assets/home-intro.jpg';
 
@@ -15,14 +15,14 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="hero-section" style={{backgroundImage: `url(${heroBg})`}}>
         <div className="hero-overlay"></div>
-        <div className="container hero-content">
-          <h1 className="display-3 text-white mb-4">Crafting Your Dream <br/><span className="text-accent">Outdoor Oasis</span></h1>
-          <p className="lead text-white mb-5 mx-auto" style={{maxWidth: '700px'}}>
-            Premium Landscaping and Power Washing services for homeowners who value excellence, precision, and natural beauty.
+        <div className="container hero-content text-start">
+          <h1 className="display-2 text-white mb-3 text-uppercase fw-black">WE SHOW UP.<br/>WE WORK HARD.</h1>
+          <p className="lead text-white mb-4 fw-bold" style={{maxWidth: '600px', fontSize: '1.25rem'}}>
+            No fluff, no nonsense. Just reliable landscaping and power washing for folks who want the job done right.
           </p>
-          <div className="d-flex justify-content-center gap-3">
-            <Link to="/services" className="btn btn-primary btn-lg px-5">Our Services</Link>
-            <Link to="/contact" className="btn btn-outline-light btn-lg px-5">Free Estimate</Link>
+          <div className="d-flex flex-column flex-sm-row gap-3">
+            <Link to="/contact" className="btn btn-outline-gold btn-lg px-5 py-3 rounded-0">Get A Free Quote</Link>
+            <Link to="/services" className="btn btn-primary btn-lg px-5 py-3 rounded-0">See Our Services</Link>
           </div>
         </div>
       </section>
@@ -32,86 +32,73 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <img 
-                src={homeIntro}
-                alt="Landscaping work" 
-                className="img-fluid rounded shadow"
-              />
+              <div style={{border: '4px solid #000'}}>
+                <img 
+                  src={homeIntro}
+                  alt="Landscaping work" 
+                  className="img-fluid w-100"
+                />
+              </div>
             </div>
             <div className="col-lg-6 ps-lg-5">
-              <h5 className="text-accent text-uppercase fw-bold mb-3">Welcome to Corey & Son</h5>
-              <h2 className="display-5 mb-4">Restoring Beauty to Every Property</h2>
-              <p className="lead mb-4">
-                With years of experience, we bring a unique blend of horticultural expertise and professional power washing techniques to transform your property.
+              <h5 className="text-danger fw-bold text-uppercase mb-2">Local & Reliable</h5>
+              <h2 className="display-5 mb-4 fw-black">COREY & SON.</h2>
+              <p className="lead mb-4 fw-bold">
+                We ain't a big franchise. We're your neighbors.
               </p>
-              <div className="row g-4 mb-4">
-                <div className="col-md-6 d-flex align-items-center">
-                  <Icon icon={FaCheckCircle} className="text-accent me-2 fs-4" />
-                  <span className="fw-semibold">Expert Landscape Design</span>
+              <p className="mb-4">
+                Me and my boy have been cutting grass and washing driveways in this town for years. We don't need fancy uniforms to prove we know what we're doing. We show up on time, we do the work, and we charge a fair price. That's it.
+              </p>
+              <div className="row g-3 mb-4">
+                <div className="col-12 d-flex align-items-center">
+                  <Icon icon={FaCheckSquare} className="text-success me-3 fs-3" />
+                  <span className="fw-bold fs-5">Fair Prices, No Hidden Fees</span>
                 </div>
-                <div className="col-md-6 d-flex align-items-center">
-                  <Icon icon={FaCheckCircle} className="text-accent me-2 fs-4" />
-                  <span className="fw-semibold">Professional Power Washing</span>
+                <div className="col-12 d-flex align-items-center">
+                  <Icon icon={FaTruck} className="text-success me-3 fs-3" />
+                  <span className="fw-bold fs-5">We Actually Show Up</span>
                 </div>
-                <div className="col-md-6 d-flex align-items-center">
-                  <Icon icon={FaCheckCircle} className="text-accent me-2 fs-4" />
-                  <span className="fw-semibold">Premium Maintenance</span>
-                </div>
-                <div className="col-md-6 d-flex align-items-center">
-                  <Icon icon={FaCheckCircle} className="text-accent me-2 fs-4" />
-                  <span className="fw-semibold">Quality Guaranteed</span>
+                <div className="col-12 d-flex align-items-center">
+                  <Icon icon={FaTools} className="text-success me-3 fs-3" />
+                  <span className="fw-bold fs-5">We Use Good Equipment</span>
                 </div>
               </div>
-              <Link to="/about" className="btn btn-outline-primary px-4">Learn More About Us</Link>
+              <Link to="/about" className="btn btn-dark btn-lg rounded-0 px-4">Meet The Team</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Highlight Services */}
-      <section className="section-padding bg-light">
+      {/* Quick Services */}
+      <section className="section-padding" style={{backgroundColor: '#e9ecef'}}>
         <div className="container">
           <div className="text-center mb-5">
-            <h5 className="text-accent text-uppercase fw-bold mb-2">Our Expertise</h5>
-            <h2 className="display-5">Services We Provide</h2>
+            <h2 className="display-5 fw-black">WHAT WE DO</h2>
+            <p className="lead">We keep it simple. If it's outside and needs cleaning or cutting, call us.</p>
           </div>
-          <div className="row g-4">
+          <div className="row g-0">
             <div className="col-md-4">
-              <div className="card h-100 service-card shadow-sm p-4">
-                <div className="text-accent mb-4 fs-1"><Icon icon={FaTree} /></div>
-                <h3>Landscaping</h3>
-                <p>From seasonal flower planting to complete garden overhauls, we create sustainable and stunning landscapes.</p>
-                <Link to="/services" className="mt-auto text-primary text-decoration-none fw-bold">Read More &rarr;</Link>
+              <div className="bg-white p-5 h-100 border border-dark">
+                <h3 className="mb-3">GRASS CUTTING</h3>
+                <p>We mow, we trim, we blow off the driveway. We don't leave a mess. Weekly or bi-weekly service available.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 service-card shadow-sm p-4">
-                <div className="text-accent mb-4 fs-1"><Icon icon={FaWater} /></div>
-                <h3>Power Washing</h3>
-                <p>Blast away dirt, mold, and grime from your siding, driveway, and deck to restore your home's curb appeal.</p>
-                <Link to="/services" className="mt-auto text-primary text-decoration-none fw-bold">Read More &rarr;</Link>
+              <div className="bg-dark text-white p-5 h-100 border border-dark">
+                <h3 className="text-white mb-3">POWER WASHING</h3>
+                <p>Got a dirty driveway? Green siding? We'll blast it clean. We've got the heavy-duty stuff to get the grime off.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 service-card shadow-sm p-4">
-                <div className="text-accent mb-4 fs-1"><Icon icon={FaCheckCircle} /></div>
-                <h3>Lawn Care</h3>
-                <p>Keep your lawn lush, green, and healthy with our comprehensive fertilization and maintenance programs.</p>
-                <Link to="/services" className="mt-auto text-primary text-decoration-none fw-bold">Read More &rarr;</Link>
+              <div className="bg-white p-5 h-100 border border-dark">
+                <h3 className="mb-3">YARD CLEANUP</h3>
+                <p>Leaves everywhere? Brush piling up? We'll come haul it away so you don't have to break your back.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-primary-green text-white text-center">
-        <div className="container">
-          <h2 className="display-5 mb-4">Ready to Transform Your Property?</h2>
-          <p className="lead mb-5 opacity-75 mx-auto" style={{maxWidth: '700px'}}>
-            Contact us today for a free, no-obligation estimate on your next landscaping or power washing project.
-          </p>
-          <Link to="/contact" className="btn btn-accent-gold btn-lg px-5 text-white" style={{backgroundColor: 'var(--accent-gold)'}}>Get Started</Link>
+          <div className="text-center mt-5">
+            <Link to="/contact" className="btn btn-warning btn-lg fw-bold rounded-0 px-5">CALL US NOW</Link>
+          </div>
         </div>
       </section>
     </div>

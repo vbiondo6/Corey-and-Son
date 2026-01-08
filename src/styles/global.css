@@ -1,56 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 :root {
-  --primary-green: #1a3c34;
-  --accent-gold: #c5a059;
-  --earth-taupe: #7d6b5d;
-  --light-bg: #f8f9fa;
+  --primary-green: #2e7d32; /* Standard Grass Green */
+  --work-black: #1a1a1a;
+  --safety-yellow: #ffc107; /* Construction/Safety Yellow */
+  --light-bg: #f0f2f5;
   --dark-text: #212529;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--dark-text);
   background-color: var(--light-bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: var(--primary-green);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; /* Thick and bold */
+  text-transform: uppercase;
+  color: var(--work-black);
+  letter-spacing: -0.5px;
 }
 
 .text-accent {
-  color: var(--accent-gold);
+  color: var(--primary-green) !important;
 }
 
 .bg-primary-green {
-  background-color: var(--primary-green);
+  background-color: var(--work-black) !important; /* Switch to black for headers for a tougher look */
 }
 
 .btn-primary {
   background-color: var(--primary-green);
   border-color: var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
-  background-color: #122b25;
-  border-color: #122b25;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 
 .btn-outline-gold {
-  color: var(--accent-gold);
-  border-color: var(--accent-gold);
+  /* Retargeting this class to be safety yellow button */
+  background-color: var(--safety-yellow);
+  color: var(--work-black);
+  border: 2px solid var(--safety-yellow);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .btn-outline-gold:hover {
-  background-color: var(--accent-gold);
-  color: white;
+  background-color: #ffca2c;
+  border-color: #ffca2c;
+  color: black;
 }
 
 .hero-section {
   position: relative;
-  height: 80vh;
+  height: 70vh; /* A bit shorter, more direct */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
 }
 
 .hero-content {
@@ -75,35 +84,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
   font-size: 1.5rem;
-  color: var(--primary-green) !important;
+  color: var(--work-black) !important;
+  text-transform: uppercase;
 }
 
 .nav-link {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   font-size: 0.9rem;
 }
 
 .section-padding {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 .service-card {
-  border: none;
-  transition: transform 0.3s ease;
-  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 0 !important; /* Square corners, no soft curves */
+  transition: none; /* No fancy hover float */
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  border-color: var(--primary-green);
+}
+
+img {
+  border-radius: 0 !important; /* Square images, utilitarian */
 }
 
 footer {
-  background-color: var(--primary-green);
+  background-color: var(--work-black);
   color: white;
-  padding: 60px 0 20px;
+  padding: 40px 0 20px;
 }
