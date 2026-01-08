@@ -44,7 +44,7 @@ const Services: React.FC = () => {
     <div>
       <section className="bg-dark text-white py-5">
         <div className="container py-4">
-          <h1 className="display-4 fw-black text-uppercase">What We Do</h1>
+          <h1 className="display-4 fw-black text-uppercase text-white">What We Do</h1>
           <p className="lead">We work hard so you don't have to.</p>
         </div>
       </section>

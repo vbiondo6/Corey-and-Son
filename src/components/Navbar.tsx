@@ -3,10 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom border-2">
+    <nav className="navbar navbar-expand-lg navbar-light bg-safety sticky-top border-bottom border-dark border-2">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <span className="fw-black" style={{fontSize: '1.4rem'}}>COREY & SON</span>
+          <span className="fw-black text-dark" style={{fontSize: '1.4rem'}}>COREY & SON</span>
         </Link>
         <button 
           className="navbar-toggler" 
