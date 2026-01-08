@@ -15,7 +15,8 @@ const Portfolio: React.FC = () => {
     {
       title: "Modern Paver Patio",
       category: "Hardscaping",
-      image: "https://images.unsplash.com/photo-1590059392234-a31189d533b3?auto=format&fit=crop&q=80&w=800"
+      // Replaced broken link with a reliable paver patio image
+      image: "https://images.unsplash.com/photo-1621251996846-34b7f753554e?auto=format&fit=crop&q=80&w=800" 
     },
     {
       title: "Commercial Lawn Overhaul",
@@ -36,10 +37,10 @@ const Portfolio: React.FC = () => {
 
   return (
     <div>
-      <section className="bg-primary-green text-white py-5">
+      <section className="bg-primary text-white py-5">
         <div className="container py-4 text-center">
-          <h1 className="display-4">Our Portfolio</h1>
-          <p className="lead opacity-75">Take a look at some of our recent transformations.</p>
+          <h1 className="display-4 fw-bold mb-0">Our Work</h1>
+          <p className="lead opacity-90 mt-2">See the difference professional care makes.</p>
         </div>
       </section>
 
@@ -48,18 +49,18 @@ const Portfolio: React.FC = () => {
           <div className="row g-4">
             {projects.map((project, index) => (
               <div className="col-lg-4 col-md-6" key={index}>
-                <div className="portfolio-item position-relative overflow-hidden rounded shadow-sm">
+                <div className="portfolio-item position-relative overflow-hidden rounded shadow-sm border">
                   <img src={project.image} alt={project.title} className="img-fluid w-100" style={{height: '300px', objectFit: 'cover'}} />
                   <div className="portfolio-overlay p-4 d-flex flex-column justify-content-end" style={{
                     position: 'absolute',
                     top: 0, left: 0, right: 0, bottom: 0,
-                    background: 'linear-gradient(to top, rgba(26, 60, 52, 0.9), transparent)',
+                    background: 'linear-gradient(to top, rgba(45, 90, 39, 0.9), transparent)', // Matched to Hunter Green
                     color: 'white',
                     opacity: 0,
                     transition: 'opacity 0.3s ease'
                   }}>
-                    <span className="text-accent small fw-bold text-uppercase">{project.category}</span>
-                    <h4 className="mb-0">{project.title}</h4>
+                    <span className="text-white-50 small fw-bold text-uppercase">{project.category}</span>
+                    <h4 className="mb-0 fw-bold">{project.title}</h4>
                   </div>
                 </div>
                 <style>{`
