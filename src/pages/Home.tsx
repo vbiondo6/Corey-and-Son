@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTree, FaWater, FaCheckCircle } from 'react-icons/fa';
 import heroBg from '../assets/hero-bg.jpg';
+import homeIntro from '../assets/home-intro.jpg';
 
 const Home: React.FC = () => {
   const Icon = (props: { icon: any, className?: string }) => {
@@ -32,7 +33,7 @@ const Home: React.FC = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <img 
-                src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&q=80&w=1000" 
+                src={homeIntro}
                 alt="Landscaping work" 
                 className="img-fluid rounded shadow"
               />
