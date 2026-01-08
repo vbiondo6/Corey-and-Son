@@ -9,43 +9,42 @@ const Services: React.FC = () => {
 
   const services = [
     {
-      title: "LAWN MOWING",
-      description: "We cut it, trim it, and blow it off. Simple as that. We'll keep your grass looking sharp all season.",
+      title: "Lawn Maintenance",
+      description: "Consistent, professional care including precision mowing, edging, and debris removal for a healthy, manicured lawn.",
       icon: FaLeaf
     },
     {
-      title: "POWER WASHING",
-      description: "Driveways, sidewalks, siding, decks. If it's got dirt on it, we can wash it off.",
+      title: "Power Washing",
+      description: "High-pressure restoration for siding, driveways, patios, and decks using specialized cleaning solutions.",
       icon: FaWater
     },
     {
-      title: "YARD CLEANUP",
-      description: "Got a mess of leaves or brush? We'll come haul it away and get your yard back in shape.",
+      title: "Property Cleanup",
+      description: "Comprehensive spring and fall cleanup services, including leaf removal and garden bed preparation.",
       icon: FaHome
     },
     {
-      title: "MULCH & PLANTING",
-      description: "Need some fresh mulch or a few bushes planted? We can handle that too. Nothing too fancy.",
+      title: "Mulching & Planting",
+      description: "Enhance your curb appeal with fresh mulch delivery and installation, along with seasonal plant selection.",
       icon: FaSeedling
     },
     {
-      title: "SMALL HARDSCAPES",
-      description: "We can fix up a walkway or lay down some pavers. Solid work that lasts.",
+      title: "Light Hardscaping",
+      description: "Repair and installation of stone walkways, paver patios, and garden retaining walls.",
       icon: FaRoad
     },
     {
-      title: "SNOW PLOWING",
-      description: "When it snows, we plow. Driveways and sidewalks. We'll get you out.",
+      title: "Snow Management",
+      description: "Reliable residential and commercial snow plowing and salting services to keep your property safe.",
       icon: FaSnowflake
     }
   ];
 
   return (
     <div>
-      <section className="bg-dark text-white py-5">
+      <section className="bg-primary text-white py-5">
         <div className="container py-4">
-          <h1 className="display-4 fw-black text-uppercase text-white">What We Do</h1>
-          <p className="lead">We work hard so you don't have to.</p>
+          <h1 className="display-4 fw-bold text-white mb-0">Our Services</h1>
         </div>
       </section>
 
@@ -54,10 +53,10 @@ const Services: React.FC = () => {
           <div className="row g-4">
             {services.map((service, index) => (
               <div className="col-lg-4 col-md-6" key={index}>
-                <div className="card h-100 service-card p-4 text-center bg-light">
-                  <div className="text-success fs-1 mb-3"><Icon icon={service.icon} /></div>
-                  <h3 className="mb-3 fw-black">{service.title}</h3>
-                  <p className="text-muted fw-bold">{service.description}</p>
+                <div className="card h-100 p-4 border-0 shadow-sm bg-light">
+                  <div className="text-accent fs-1 mb-3"><Icon icon={service.icon} /></div>
+                  <h3 className="h4 mb-3 fw-bold">{service.title}</h3>
+                  <p className="text-muted small">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -65,15 +64,15 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="section-padding" style={{backgroundColor: '#ffc107'}}>
+      <section className="section-padding" style={{backgroundColor: '#f8f9fa'}}>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8 mx-auto text-center text-dark">
-              <h2 className="display-5 fw-black mb-4 text-uppercase">Need Something Else?</h2>
-              <p className="lead fw-bold mb-4">
-                If you need something done outside and you don't see it listed, just ask. If we can do it, we will. If we can't, we'll tell you straight up.
+            <div className="col-lg-8 mx-auto text-center">
+              <h2 className="display-6 fw-bold mb-4">Ready for a Free Estimate?</h2>
+              <p className="lead text-muted mb-4">
+                We provide honest, upfront pricing with no hidden fees. Contact us today to schedule a walkthrough of your property.
               </p>
-              <a href="/contact" className="btn btn-dark btn-lg rounded-0 px-5 fw-bold">GIVE US A CALL</a>
+              <a href="/contact" className="btn btn-primary btn-lg">Contact Us Today</a>
             </div>
           </div>
         </div>

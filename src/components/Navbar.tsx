@@ -3,41 +3,38 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-safety sticky-top border-bottom border-dark border-2">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top">
       <div className="container">
-        <Link className="navbar-brand d-flex align-items-center" to="/">
-          <span className="fw-black text-dark" style={{fontSize: '1.4rem'}}>COREY & SON</span>
+        <Link className="navbar-brand" to="/">
+          COREY & SON <span className="d-none d-sm-inline opacity-50 fw-light">| Landscaping & Power Washing</span>
         </Link>
         <button 
-          className="navbar-toggler" 
+          className="navbar-toggler border-0" 
           type="button" 
           data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation"
+          data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">Home</NavLink>
+              <NavLink className="nav-link px-3 fw-bold" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">About</NavLink>
+              <NavLink className="nav-link px-3 fw-bold" to="/about">About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/services">Services</NavLink>
+              <NavLink className="nav-link px-3 fw-bold" to="/services">Services</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/portfolio">Work</NavLink>
+              <NavLink className="nav-link px-3 fw-bold" to="/portfolio">Our Work</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">Contact</NavLink>
+              <NavLink className="nav-link px-3 fw-bold" to="/contact">Contact</NavLink>
             </li>
           </ul>
-          <Link to="/contact" className="btn btn-primary ms-lg-3 px-4 fw-bold rounded-0">GET A QUOTE</Link>
+          <Link to="/contact" className="btn btn-primary ms-lg-3">Request Estimate</Link>
         </div>
       </div>
     </nav>

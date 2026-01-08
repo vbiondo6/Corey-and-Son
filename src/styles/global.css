@@ -1,125 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-  --primary-green: #2e7d32; /* Standard Grass Green */
-  --work-black: #1a1a1a;
-  --safety-yellow: #ffc107; /* Construction/Safety Yellow */
-  --light-bg: #f0f2f5;
-  --dark-text: #212529;
+  --primary-green: #2d5a27; /* Professional Hunter Green */
+  --secondary-gray: #333d47; /* Professional Charcoal */
+  --accent-light: #f4f7f4;
+  --text-dark: #2c3e50;
+  --white: #ffffff;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--dark-text);
-  background-color: var(--light-bg);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900; /* Thick and bold */
-  text-transform: uppercase;
-  letter-spacing: -0.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: var(--secondary-gray);
+  text-transform: none; /* Back to normal casing for a cleaner look */
 }
 
 .text-accent {
   color: var(--primary-green) !important;
 }
 
-.bg-safety {
-  background-color: var(--safety-yellow) !important;
-}
-
-.bg-primary-green {
-  background-color: var(--work-black) !important; 
+.bg-primary {
+  background-color: var(--primary-green) !important;
 }
 
 .btn-primary {
   background-color: var(--primary-green);
   border-color: var(--primary-green);
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
-  background-color: #1b5e20;
-  border-color: #1b5e20;
+  background-color: #1e3d1a;
+  border-color: #1e3d1a;
 }
 
-.btn-outline-gold {
-  /* Retargeting this class to be safety yellow button */
-  background-color: var(--safety-yellow);
-  color: var(--work-black);
-  border: 2px solid var(--safety-yellow);
-  font-weight: 700;
-  text-transform: uppercase;
+.btn-outline-primary {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  font-weight: 600;
+  border-radius: 4px;
 }
 
-.btn-outline-gold:hover {
-  background-color: #ffca2c;
-  border-color: #ffca2c;
-  color: black;
+.btn-outline-primary:hover {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.navbar {
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--primary-green) !important;
 }
 
 .hero-section {
   position: relative;
-  height: 70vh; /* A bit shorter, more direct */
+  height: 75vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: white;
-  text-align: center;
   background-size: cover;
   background-position: center;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.navbar-brand {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: var(--work-black) !important;
-  text-transform: uppercase;
-}
-
-.nav-link {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
 }
 
 .section-padding {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
-.service-card {
-  border: 2px solid #ddd;
-  border-radius: 0 !important; /* Square corners, no soft curves */
-  transition: none; /* No fancy hover float */
+.card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.service-card:hover {
-  border-color: var(--primary-green);
-}
-
-img {
-  border-radius: 0 !important; /* Square images, utilitarian */
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
 }
 
 footer {
-  background-color: var(--work-black);
+  background-color: var(--secondary-gray);
   color: white;
-  padding: 40px 0 20px;
+  padding: 60px 0 30px;
 }
